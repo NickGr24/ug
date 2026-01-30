@@ -1,0 +1,126 @@
+<!-- Present Now Tab Content -->
+<div class="d-flex justify-content-end mb-3">
+    <a href="{% url 'core:present_export' %}" class="btn btn-outline-success">
+        <i class="bi bi-download me-1"></i>Export CSV
+    </a>
+</div>
+
+<div class="row mb-4">
+    <div class="col-md-4">
+        <div class="card text-center">
+            <div class="card-body">
+                <div class="present-count">{{ total_count }}</div>
+                <div class="text-muted">Total prezenti</div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card text-center">
+            <div class="card-body">
+                <div class="present-count text-primary">{{ present_employees|length }}</div>
+                <div class="text-muted">Angajati</div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card text-center">
+            <div class="card-body">
+                <div class="present-count text-info">{{ present_vehicles|length }}</div>
+                <div class="text-muted">Vehicule</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <!-- Present Employees -->
+    <div class="col-lg-6 mb-4">
+        <div class="card h-100">
+            <div class="card-header d-flex justify-content-between align-items-center">
+                <span><i class="bi bi-people me-2"></i>Angajati prezenti</span>
+                <span class="badge bg-primary">{{ present_employees|length }}</span>
+            </div>
+            <div class="card-body p-0">
+                {% if present_employees %}
+                <div class="table-responsive">
+                    <table class="table table-hover mb-0">
+                        <thead class="table-light">
+                            <tr>
+                                <th>Nume</th>
+                                <th>Departament</th>
+                                <th>Ora intrare</th>
+                                {% if user.is_admin %}<th>Locatie</th>{% endif %}
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for item in present_employees %}
+                            <tr>
+                                <td class="fw-semibold">{{ item.name }}</td>
+                                <td>{{ item.departament|default:"-" }}</td>
+                                <td class="text-muted">{{ item.entry_time|time:"H:i" }}</td>
+                                {% if user.is_admin %}
+                                <td><span class="badge bg-secondary">{{ item.entry_location.code }}</span></td>
+                                {% endif %}
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+                {% else %}
+                <div class="empty-state">
+                    <i class="bi bi-person-x d-block"></i>
+                    <p class="mb-0">Niciun angajat prezent.</p>
+                </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+
+    <!-- Present Vehicles -->
+    <div class="col-lg-6 mb-4">
+        <div class="card h-100">
+            <div class="card-header d-flex justify-content-between align-items-center">
+                <span><i class="bi bi-car-front me-2"></i>Vehicule prezente</span>
+                <span class="badge bg-info">{{ present_vehicles|length }}</span>
+            </div>
+            <div class="card-body p-0">
+                {% if present_vehicles %}
+                <div class="table-responsive">
+                    <table class="table table-hover mb-0">
+                        <thead class="table-light">
+                            <tr>
+                                <th>Numar</th>
+                                <th>Descriere</th>
+                                <th>Ora intrare</th>
+                                {% if user.is_admin %}<th>Locatie</th>{% endif %}
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for item in present_vehicles %}
+                            <tr>
+                                <td class="fw-semibold font-monospace">{{ item.name }}</td>
+                                <td>{{ item.descriere|default:"-" }}</td>
+                                <td class="text-muted">{{ item.entry_time|time:"H:i" }}</td>
+                                {% if user.is_admin %}
+                                <td><span class="badge bg-secondary">{{ item.entry_location.code }}</span></td>
+                                {% endif %}
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+                {% else %}
+                <div class="empty-state">
+                    <i class="bi bi-car-front d-block"></i>
+                    <p class="mb-0">Niciun vehicul prezent.</p>
+                </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="text-center text-muted small">
+    <i class="bi bi-arrow-repeat me-1"></i>
+    Auto-actualizare la fiecare 30 secunde
+</div>

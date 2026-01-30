@@ -1,0 +1,43 @@
+<!-- Location selector with present counts -->
+{% if user.is_admin %}
+<div class="dropdown me-3">
+    <button class="btn btn-outline-light dropdown-toggle" type="button" data-bs-toggle="dropdown">
+        <i class="bi bi-geo-alt me-1"></i>
+        {% if current_location %}
+            {{ current_location.name }}
+            <span class="badge bg-success ms-1">{{ present_counts }}</span>
+        {% else %}
+            Toate locatiile
+            <span class="badge bg-success ms-1">{{ total_present }}</span>
+        {% endif %}
+    </button>
+    <ul class="dropdown-menu dropdown-menu-end">
+        <li>
+            <button class="dropdown-item d-flex justify-content-between align-items-center"
+                    hx-post="{% url 'core:switch_location' %}" hx-vals='{}'>
+                Toate locatiile
+                <span class="badge bg-success">{{ total_present }}</span>
+            </button>
+        </li>
+        <li><hr class="dropdown-divider"></li>
+        {% for loc in locations %}
+        <li>
+            <button class="dropdown-item d-flex justify-content-between align-items-center {% if current_location.id == loc.id %}active{% endif %}"
+                    hx-post="{% url 'core:switch_location' %}"
+                    hx-vals='{"location_id": "{{ loc.id }}"}'>
+                {{ loc.name }}
+                <span class="badge {% if current_location.id == loc.id %}bg-light text-dark{% else %}bg-success{% endif %}">
+                    {{ loc.present_count }}
+                </span>
+            </button>
+        </li>
+        {% endfor %}
+    </ul>
+</div>
+{% else %}
+<!-- Officer view: show only their location with count -->
+<span class="badge bg-info me-3 fs-6 d-flex align-items-center">
+    <i class="bi bi-geo-alt me-1"></i>{{ current_location.name }}
+    <span class="badge bg-success ms-2">{{ present_counts }}</span>
+</span>
+{% endif %}

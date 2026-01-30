@@ -1,0 +1,72 @@
+<!-- Combined Registry Tab: Employees + Vehicles -->
+<div class="row">
+    <!-- Employees Section -->
+    <div class="col-lg-6 mb-4">
+        <div class="card h-100">
+            <div class="card-header d-flex justify-content-between align-items-center">
+                <span><i class="bi bi-people me-2"></i>Angajati</span>
+                <div class="d-flex gap-2">
+                    <a href="{% url 'core:employees_export' %}" class="btn btn-outline-success btn-sm">
+                        <i class="bi bi-download"></i>
+                    </a>
+                    <button class="btn btn-primary btn-sm"
+                            hx-get="{% url 'core:employee_add' %}"
+                            hx-target="#modal-content"
+                            hx-swap="innerHTML">
+                        <i class="bi bi-plus-lg"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="card-body p-0">
+                <div class="p-2 border-bottom">
+                    <input type="search"
+                           class="form-control form-control-sm"
+                           placeholder="Cautare angajati..."
+                           name="search"
+                           hx-get="{% url 'core:htmx_employees_list' %}"
+                           hx-target="#employees-list"
+                           hx-trigger="keyup changed delay:300ms, search"
+                           hx-include="this">
+                </div>
+                <div id="employees-list" style="max-height: 500px; overflow-y: auto;">
+                    {% include 'core/partials/_employees_list.html' %}
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Vehicles Section -->
+    <div class="col-lg-6 mb-4">
+        <div class="card h-100">
+            <div class="card-header d-flex justify-content-between align-items-center">
+                <span><i class="bi bi-car-front me-2"></i>Vehicule</span>
+                <div class="d-flex gap-2">
+                    <a href="{% url 'core:vehicles_export' %}" class="btn btn-outline-success btn-sm">
+                        <i class="bi bi-download"></i>
+                    </a>
+                    <button class="btn btn-primary btn-sm"
+                            hx-get="{% url 'core:vehicle_add' %}"
+                            hx-target="#modal-content"
+                            hx-swap="innerHTML">
+                        <i class="bi bi-plus-lg"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="card-body p-0">
+                <div class="p-2 border-bottom">
+                    <input type="search"
+                           class="form-control form-control-sm"
+                           placeholder="Cautare vehicule..."
+                           name="search"
+                           hx-get="{% url 'core:htmx_vehicles_list' %}"
+                           hx-target="#vehicles-list"
+                           hx-trigger="keyup changed delay:300ms, search"
+                           hx-include="this">
+                </div>
+                <div id="vehicles-list" style="max-height: 500px; overflow-y: auto;">
+                    {% include 'core/partials/_vehicles_list.html' %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

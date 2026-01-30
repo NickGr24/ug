@@ -1,0 +1,59 @@
+<h5 class="modal-title mb-4">
+    {% if object %}Editare angajat{% else %}Adaugare angajat{% endif %}
+</h5>
+
+{% if form.non_field_errors %}
+<div class="alert alert-danger mb-3">
+    {% for error in form.non_field_errors %}
+    <div>{{ error }}</div>
+    {% endfor %}
+</div>
+{% endif %}
+
+<form hx-post="{{ request.path }}"
+      hx-target="#modal-content"
+      hx-swap="innerHTML">
+    {% csrf_token %}
+
+    <div class="mb-3">
+        <label for="id_nume" class="form-label">Nume complet <span class="text-danger">*</span></label>
+        {{ form.nume }}
+        {% if form.nume.errors %}
+        <div class="text-danger small">{{ form.nume.errors.0 }}</div>
+        {% endif %}
+    </div>
+
+    <div class="mb-3">
+        <label for="id_department" class="form-label">Departament</label>
+        {{ form.department }}
+        {% if form.department.errors %}
+        <div class="text-danger small">{{ form.department.errors.0 }}</div>
+        {% endif %}
+    </div>
+
+    {% if not request.user.is_officer %}
+    <div class="mb-3">
+        <label for="id_location" class="form-label">Locatie <span class="text-danger">*</span></label>
+        {{ form.location }}
+        {% if form.location.errors %}
+        <div class="text-danger small">{{ form.location.errors.0 }}</div>
+        {% endif %}
+    </div>
+    {% endif %}
+
+    {% if object %}
+    <div class="mb-3">
+        <div class="form-check">
+            {{ form.activ }}
+            <label class="form-check-label" for="id_activ">Activ</label>
+        </div>
+    </div>
+    {% endif %}
+
+    <div class="d-flex gap-2 justify-content-end mt-4">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Anuleaza</button>
+        <button type="submit" class="btn btn-primary">
+            <i class="bi bi-check-lg me-1"></i>Salveaza
+        </button>
+    </div>
+</form>

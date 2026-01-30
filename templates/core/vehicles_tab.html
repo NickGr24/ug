@@ -1,0 +1,30 @@
+<!-- Vehicles Tab Content -->
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <div class="input-group" style="max-width: 350px;">
+        <span class="input-group-text"><i class="bi bi-search"></i></span>
+        <input type="search"
+               class="form-control"
+               placeholder="Cautare dupa numar, descriere, proprietar..."
+               name="search"
+               value="{{ search }}"
+               hx-get="{% url 'core:htmx_vehicles_list' %}"
+               hx-target="#vehicles-list"
+               hx-trigger="keyup changed delay:300ms, search"
+               hx-include="this">
+    </div>
+    <div class="d-flex gap-2">
+        <a href="{% url 'core:vehicles_export' %}?search={{ search }}" class="btn btn-outline-success">
+            <i class="bi bi-download me-1"></i>Export CSV
+        </a>
+        <button class="btn btn-primary"
+                hx-get="{% url 'core:vehicle_add' %}"
+                hx-target="#modal-content"
+                hx-swap="innerHTML">
+            <i class="bi bi-plus-lg me-2"></i>Adauga Vehicul
+        </button>
+    </div>
+</div>
+
+<div id="vehicles-list">
+    {% include 'core/partials/_vehicles_list.html' %}
+</div>
