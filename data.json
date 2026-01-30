@@ -1,0 +1,1429 @@
+[
+{
+  "model": "admin.logentry",
+  "pk": 1,
+  "fields": {
+    "action_time": "2026-01-29T10:12:04.227Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "2",
+    "object_repr": "Ofiter Asachi (Ofiter de Serviciu)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"password\"]}}]"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "46ldnzeezx2e1j5u5nh2uk91k7lu9c79",
+  "fields": {
+    "session_data": ".eJxVjMsOwiAQRf-FtSHDowIu3fcbCFNmpGogKe3K-O_apAvd3nPOfYmYtrXErdMS5ywuQonT74ZpelDdQb6nemtyanVdZpS7Ig_a5dgyPa-H-3dQUi_fmgHJqGAROEPQgS2fndPotWGyGbKhwcKA1igiY8Elz2Q8ovJBe0bx_gDhPDfW:1vlR1c:smITOvpGf8UDJi_6c_6ot8HwJdZOdJf54bfUNlh-qHo",
+    "expire_date": "2026-02-12T12:21:28.854Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "cfpaejp3u1pkww0p6jii8bo2ms2oz005",
+  "fields": {
+    "session_data": ".eJxVjssOwiAURP-FtSG8asGle7-BcOFeW20gAboy_rut6UK3c2ZO5sV8WPvk14bVz4ldmGSn3wxCfGLeQXqEfC88ltzrDHyv8IM2fisJl-vR_RNMoU3bmgSgls6AoCSccmToPI4KrNKEJomkcTBiAKMlojZiDJZQWwBpnbIEmzSutWLufikx9Lnk71_5_gCKf0CY:1vlj2a:fLobl4jz13USXkgOQMcLW6c6coOxRtFHdAkXQmc8v5Q",
+    "expire_date": "2026-02-13T07:35:40.057Z"
+  }
+},
+{
+  "model": "core.location",
+  "pk": 1,
+  "fields": {
+    "name": "UG Asachi",
+    "code": "ASACHI",
+    "address": "",
+    "is_active": true,
+    "created_at": "2026-01-28T13:34:34.973Z"
+  }
+},
+{
+  "model": "core.location",
+  "pk": 2,
+  "fields": {
+    "name": "UG Sf.Vineri",
+    "code": "SFVINERI",
+    "address": "",
+    "is_active": true,
+    "created_at": "2026-01-28T13:34:34.979Z"
+  }
+},
+{
+  "model": "core.location",
+  "pk": 3,
+  "fields": {
+    "name": "UG Centrul de Excelenta Ungheni",
+    "code": "UNGHENI",
+    "address": "",
+    "is_active": true,
+    "created_at": "2026-01-28T13:34:34.985Z"
+  }
+},
+{
+  "model": "core.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$4eDoQdFLikMulG0n0ryabu$xmOk8h31R3j9662cTftFmgblQ4txJ5QYdgqz6lMIyoM=",
+    "last_login": "2026-01-30T07:35:27.375Z",
+    "is_superuser": true,
+    "username": "admin",
+    "first_name": "Administrator",
+    "last_name": "Sistema",
+    "email": "admin@example.com",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2026-01-28T13:34:34.990Z",
+    "role": "admin",
+    "location": null,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "core.user",
+  "pk": 2,
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$3rLsaXQarE6C9OMHCFVSVf$etwDTKNBdevUI/V//8BWQ5RK29YYk2RSz2qjGwwyosk=",
+    "last_login": "2026-01-29T10:18:46.345Z",
+    "is_superuser": false,
+    "username": "ofiter_asachi",
+    "first_name": "Ofiter",
+    "last_name": "Asachi",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-01-28T13:34:35.726Z",
+    "role": "officer",
+    "location": 1,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "core.user",
+  "pk": 3,
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$GQO23z9n590Ko8WfrnEUBo$b22f2vS5IWcQ8ReyRwBIJX7Ku9QtuuN6WN7qaSEdweY=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "ofiter_sfvineri",
+    "first_name": "Ofiter",
+    "last_name": "Sf.Vineri",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-01-28T13:34:36.440Z",
+    "role": "officer",
+    "location": 2,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "core.user",
+  "pk": 4,
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$I0PXcMcAsAA0PDoaG2Am0z$v8eCya2SwZADXl3jHcZIB9DBvF5uuyLgKvlAJj/ZMd4=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "ofiter_ungheni",
+    "first_name": "Ofiter",
+    "last_name": "Ungheni",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-01-28T13:34:37.041Z",
+    "role": "officer",
+    "location": 3,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "core.department",
+  "pk": 1,
+  "fields": {
+    "name": "Catedra Drept Penal",
+    "location": 1,
+    "is_active": true,
+    "created_at": "2026-01-29T09:14:11.094Z"
+  }
+},
+{
+  "model": "core.department",
+  "pk": 2,
+  "fields": {
+    "name": "Catedra Drept Civil",
+    "location": 1,
+    "is_active": true,
+    "created_at": "2026-01-29T09:14:11.125Z"
+  }
+},
+{
+  "model": "core.department",
+  "pk": 3,
+  "fields": {
+    "name": "Catedra Drept Politienesc",
+    "location": 1,
+    "is_active": true,
+    "created_at": "2026-01-29T09:14:11.130Z"
+  }
+},
+{
+  "model": "core.department",
+  "pk": 4,
+  "fields": {
+    "name": "Unitatea de Garda",
+    "location": 1,
+    "is_active": true,
+    "created_at": "2026-01-29T09:14:11.135Z"
+  }
+},
+{
+  "model": "core.department",
+  "pk": 5,
+  "fields": {
+    "name": "Sectia Tehnologii Informationale",
+    "location": 1,
+    "is_active": true,
+    "created_at": "2026-01-29T09:14:11.139Z"
+  }
+},
+{
+  "model": "core.department",
+  "pk": 6,
+  "fields": {
+    "name": "Catedra Drept Penal",
+    "location": 3,
+    "is_active": true,
+    "created_at": "2026-01-29T09:14:11.144Z"
+  }
+},
+{
+  "model": "core.department",
+  "pk": 7,
+  "fields": {
+    "name": "Catedra Drept Civil",
+    "location": 3,
+    "is_active": true,
+    "created_at": "2026-01-29T09:14:11.147Z"
+  }
+},
+{
+  "model": "core.department",
+  "pk": 8,
+  "fields": {
+    "name": "Catedra Drept Politienesc",
+    "location": 3,
+    "is_active": true,
+    "created_at": "2026-01-29T09:14:11.154Z"
+  }
+},
+{
+  "model": "core.department",
+  "pk": 9,
+  "fields": {
+    "name": "Unitatea de Garda",
+    "location": 3,
+    "is_active": true,
+    "created_at": "2026-01-29T09:14:11.159Z"
+  }
+},
+{
+  "model": "core.department",
+  "pk": 10,
+  "fields": {
+    "name": "Sectia Tehnologii Informationale",
+    "location": 3,
+    "is_active": true,
+    "created_at": "2026-01-29T09:14:11.163Z"
+  }
+},
+{
+  "model": "core.department",
+  "pk": 11,
+  "fields": {
+    "name": "Catedra Drept Penal",
+    "location": 2,
+    "is_active": true,
+    "created_at": "2026-01-29T09:14:11.168Z"
+  }
+},
+{
+  "model": "core.department",
+  "pk": 12,
+  "fields": {
+    "name": "Catedra Drept Civil",
+    "location": 2,
+    "is_active": true,
+    "created_at": "2026-01-29T09:14:11.172Z"
+  }
+},
+{
+  "model": "core.department",
+  "pk": 13,
+  "fields": {
+    "name": "Catedra Drept Politienesc",
+    "location": 2,
+    "is_active": true,
+    "created_at": "2026-01-29T09:14:11.176Z"
+  }
+},
+{
+  "model": "core.department",
+  "pk": 14,
+  "fields": {
+    "name": "Unitatea de Garda",
+    "location": 2,
+    "is_active": true,
+    "created_at": "2026-01-29T09:14:11.180Z"
+  }
+},
+{
+  "model": "core.department",
+  "pk": 15,
+  "fields": {
+    "name": "Sectia Tehnologii Informationale",
+    "location": 2,
+    "is_active": true,
+    "created_at": "2026-01-29T09:14:11.183Z"
+  }
+},
+{
+  "model": "core.employee",
+  "pk": 1,
+  "fields": {
+    "location": 1,
+    "ext_id": "EMPASA0001",
+    "nume": "Ion Popescu",
+    "department": 4,
+    "activ": true,
+    "created_at": "2026-01-28T13:34:37.735Z",
+    "updated_at": "2026-01-29T09:14:11.230Z"
+  }
+},
+{
+  "model": "core.employee",
+  "pk": 2,
+  "fields": {
+    "location": 1,
+    "ext_id": "EMPASA0002",
+    "nume": "Maria Ionescu",
+    "department": 2,
+    "activ": true,
+    "created_at": "2026-01-28T13:34:37.743Z",
+    "updated_at": "2026-01-29T09:14:11.238Z"
+  }
+},
+{
+  "model": "core.employee",
+  "pk": 3,
+  "fields": {
+    "location": 1,
+    "ext_id": "EMPASA0003",
+    "nume": "Alexandru Stan",
+    "department": 5,
+    "activ": true,
+    "created_at": "2026-01-28T13:34:37.752Z",
+    "updated_at": "2026-01-29T09:14:11.193Z"
+  }
+},
+{
+  "model": "core.employee",
+  "pk": 4,
+  "fields": {
+    "location": 2,
+    "ext_id": "EMPSFV0001",
+    "nume": "Elena Rusu",
+    "department": 11,
+    "activ": true,
+    "created_at": "2026-01-28T13:34:37.757Z",
+    "updated_at": "2026-01-29T09:14:11.221Z"
+  }
+},
+{
+  "model": "core.employee",
+  "pk": 5,
+  "fields": {
+    "location": 2,
+    "ext_id": "EMPSFV0002",
+    "nume": "Andrei Munteanu",
+    "department": 13,
+    "activ": true,
+    "created_at": "2026-01-28T13:34:37.766Z",
+    "updated_at": "2026-01-29T09:14:11.206Z"
+  }
+},
+{
+  "model": "core.employee",
+  "pk": 6,
+  "fields": {
+    "location": 2,
+    "ext_id": "EMPSFV0003",
+    "nume": "Vasile Cojocaru",
+    "department": 14,
+    "activ": true,
+    "created_at": "2026-01-28T13:34:37.776Z",
+    "updated_at": "2026-01-29T09:14:11.256Z"
+  }
+},
+{
+  "model": "core.employee",
+  "pk": 7,
+  "fields": {
+    "location": 3,
+    "ext_id": "EMPUNG0001",
+    "nume": "Ana Chirila",
+    "department": 10,
+    "activ": true,
+    "created_at": "2026-01-28T13:34:37.783Z",
+    "updated_at": "2026-01-29T09:14:11.200Z"
+  }
+},
+{
+  "model": "core.employee",
+  "pk": 8,
+  "fields": {
+    "location": 3,
+    "ext_id": "EMPUNG0002",
+    "nume": "Mihai Lungu",
+    "department": 7,
+    "activ": true,
+    "created_at": "2026-01-28T13:34:37.789Z",
+    "updated_at": "2026-01-29T09:14:11.250Z"
+  }
+},
+{
+  "model": "core.employee",
+  "pk": 9,
+  "fields": {
+    "location": 3,
+    "ext_id": "EMPUNG0003",
+    "nume": "Cristina Moraru",
+    "department": 7,
+    "activ": true,
+    "created_at": "2026-01-28T13:34:37.795Z",
+    "updated_at": "2026-01-29T09:14:11.213Z"
+  }
+},
+{
+  "model": "core.vehicle",
+  "pk": 1,
+  "fields": {
+    "location": 1,
+    "plate_number": "ABC 123",
+    "descriere": "Autoturism",
+    "proprietar": "Ion Popescu",
+    "activ": true,
+    "created_at": "2026-01-28T13:34:37.801Z",
+    "updated_at": "2026-01-28T13:34:37.801Z"
+  }
+},
+{
+  "model": "core.vehicle",
+  "pk": 2,
+  "fields": {
+    "location": 1,
+    "plate_number": "DEF 456",
+    "descriere": "Utilitara",
+    "proprietar": "Firma",
+    "activ": true,
+    "created_at": "2026-01-28T13:34:37.808Z",
+    "updated_at": "2026-01-28T13:34:37.808Z"
+  }
+},
+{
+  "model": "core.vehicle",
+  "pk": 3,
+  "fields": {
+    "location": 2,
+    "plate_number": "GHI 789",
+    "descriere": "Autoturism",
+    "proprietar": "Elena Rusu",
+    "activ": true,
+    "created_at": "2026-01-28T13:34:37.814Z",
+    "updated_at": "2026-01-28T13:34:37.814Z"
+  }
+},
+{
+  "model": "core.vehicle",
+  "pk": 4,
+  "fields": {
+    "location": 2,
+    "plate_number": "JKL 012",
+    "descriere": "Camion",
+    "proprietar": "Transport SRL",
+    "activ": true,
+    "created_at": "2026-01-28T13:34:37.820Z",
+    "updated_at": "2026-01-28T13:34:37.820Z"
+  }
+},
+{
+  "model": "core.vehicle",
+  "pk": 5,
+  "fields": {
+    "location": 3,
+    "plate_number": "MNO 345",
+    "descriere": "Autoturism",
+    "proprietar": "Mihai Lungu",
+    "activ": true,
+    "created_at": "2026-01-28T13:34:37.828Z",
+    "updated_at": "2026-01-28T13:34:37.828Z"
+  }
+},
+{
+  "model": "core.vehicle",
+  "pk": 6,
+  "fields": {
+    "location": 3,
+    "plate_number": "PQR 678",
+    "descriere": "Microbuz",
+    "proprietar": "Firma",
+    "activ": true,
+    "created_at": "2026-01-28T13:34:37.833Z",
+    "updated_at": "2026-01-28T13:34:37.833Z"
+  }
+},
+{
+  "model": "core.vehicle",
+  "pk": 7,
+  "fields": {
+    "location": 1,
+    "plate_number": "abc123",
+    "descriere": "",
+    "proprietar": "",
+    "activ": false,
+    "created_at": "2026-01-29T12:07:26.938Z",
+    "updated_at": "2026-01-29T12:07:26.938Z"
+  }
+},
+{
+  "model": "core.vehicle",
+  "pk": 8,
+  "fields": {
+    "location": 1,
+    "plate_number": "abc 123",
+    "descriere": "",
+    "proprietar": "",
+    "activ": false,
+    "created_at": "2026-01-29T12:07:55.175Z",
+    "updated_at": "2026-01-29T12:07:55.175Z"
+  }
+},
+{
+  "model": "core.vehicle",
+  "pk": 9,
+  "fields": {
+    "location": 3,
+    "plate_number": "ABC-123",
+    "descriere": "",
+    "proprietar": "Elena Rusu",
+    "activ": false,
+    "created_at": "2026-01-29T12:15:41.268Z",
+    "updated_at": "2026-01-29T12:15:41.268Z"
+  }
+},
+{
+  "model": "core.vehicle",
+  "pk": 10,
+  "fields": {
+    "location": 3,
+    "plate_number": "GHT 252",
+    "descriere": "",
+    "proprietar": "",
+    "activ": false,
+    "created_at": "2026-01-29T12:18:44.307Z",
+    "updated_at": "2026-01-29T12:18:44.307Z"
+  }
+},
+{
+  "model": "core.logentry",
+  "pk": 1,
+  "fields": {
+    "location": 3,
+    "entity_type": "employee",
+    "entity_id": 7,
+    "direction": "IN",
+    "timestamp": "2026-01-29T07:49:15.365Z",
+    "recorded_by": 1
+  }
+},
+{
+  "model": "core.logentry",
+  "pk": 2,
+  "fields": {
+    "location": 3,
+    "entity_type": "employee",
+    "entity_id": 7,
+    "direction": "OUT",
+    "timestamp": "2026-01-29T07:50:22.270Z",
+    "recorded_by": 1
+  }
+},
+{
+  "model": "core.logentry",
+  "pk": 3,
+  "fields": {
+    "location": 2,
+    "entity_type": "employee",
+    "entity_id": 4,
+    "direction": "IN",
+    "timestamp": "2026-01-29T08:01:14.153Z",
+    "recorded_by": 1
+  }
+},
+{
+  "model": "core.logentry",
+  "pk": 4,
+  "fields": {
+    "location": 2,
+    "entity_type": "employee",
+    "entity_id": 5,
+    "direction": "IN",
+    "timestamp": "2026-01-29T08:08:16.870Z",
+    "recorded_by": 1
+  }
+},
+{
+  "model": "core.logentry",
+  "pk": 5,
+  "fields": {
+    "location": 2,
+    "entity_type": "employee",
+    "entity_id": 4,
+    "direction": "OUT",
+    "timestamp": "2026-01-29T08:57:43.012Z",
+    "recorded_by": 1
+  }
+},
+{
+  "model": "core.logentry",
+  "pk": 6,
+  "fields": {
+    "location": 2,
+    "entity_type": "employee",
+    "entity_id": 4,
+    "direction": "IN",
+    "timestamp": "2026-01-29T09:18:40.411Z",
+    "recorded_by": 1
+  }
+},
+{
+  "model": "core.logentry",
+  "pk": 7,
+  "fields": {
+    "location": 2,
+    "entity_type": "employee",
+    "entity_id": 5,
+    "direction": "OUT",
+    "timestamp": "2026-01-29T09:20:44.329Z",
+    "recorded_by": 1
+  }
+},
+{
+  "model": "core.logentry",
+  "pk": 8,
+  "fields": {
+    "location": 3,
+    "entity_type": "employee",
+    "entity_id": 8,
+    "direction": "IN",
+    "timestamp": "2026-01-29T09:39:37.110Z",
+    "recorded_by": 1
+  }
+},
+{
+  "model": "core.logentry",
+  "pk": 9,
+  "fields": {
+    "location": 1,
+    "entity_type": "employee",
+    "entity_id": 3,
+    "direction": "IN",
+    "timestamp": "2026-01-29T09:59:30.912Z",
+    "recorded_by": 1
+  }
+},
+{
+  "model": "core.logentry",
+  "pk": 10,
+  "fields": {
+    "location": 2,
+    "entity_type": "employee",
+    "entity_id": 5,
+    "direction": "IN",
+    "timestamp": "2026-01-29T10:00:06.796Z",
+    "recorded_by": 1
+  }
+},
+{
+  "model": "core.logentry",
+  "pk": 11,
+  "fields": {
+    "location": 2,
+    "entity_type": "vehicle",
+    "entity_id": 4,
+    "direction": "IN",
+    "timestamp": "2026-01-29T10:04:48.953Z",
+    "recorded_by": 1
+  }
+},
+{
+  "model": "core.logentry",
+  "pk": 12,
+  "fields": {
+    "location": 2,
+    "entity_type": "vehicle",
+    "entity_id": 4,
+    "direction": "OUT",
+    "timestamp": "2026-01-29T10:04:50.023Z",
+    "recorded_by": 1
+  }
+},
+{
+  "model": "core.logentry",
+  "pk": 13,
+  "fields": {
+    "location": 2,
+    "entity_type": "vehicle",
+    "entity_id": 3,
+    "direction": "IN",
+    "timestamp": "2026-01-29T10:05:02.859Z",
+    "recorded_by": 1
+  }
+},
+{
+  "model": "core.logentry",
+  "pk": 14,
+  "fields": {
+    "location": 1,
+    "entity_type": "vehicle",
+    "entity_id": 1,
+    "direction": "IN",
+    "timestamp": "2026-01-29T10:07:18.072Z",
+    "recorded_by": 1
+  }
+},
+{
+  "model": "core.logentry",
+  "pk": 15,
+  "fields": {
+    "location": 1,
+    "entity_type": "employee",
+    "entity_id": 1,
+    "direction": "IN",
+    "timestamp": "2026-01-29T10:07:18.081Z",
+    "recorded_by": 1
+  }
+},
+{
+  "model": "core.logentry",
+  "pk": 16,
+  "fields": {
+    "location": 2,
+    "entity_type": "vehicle",
+    "entity_id": 3,
+    "direction": "OUT",
+    "timestamp": "2026-01-29T10:08:13.211Z",
+    "recorded_by": 1
+  }
+},
+{
+  "model": "core.logentry",
+  "pk": 17,
+  "fields": {
+    "location": 2,
+    "entity_type": "employee",
+    "entity_id": 4,
+    "direction": "OUT",
+    "timestamp": "2026-01-29T10:08:13.219Z",
+    "recorded_by": 1
+  }
+},
+{
+  "model": "core.logentry",
+  "pk": 18,
+  "fields": {
+    "location": 1,
+    "entity_type": "employee",
+    "entity_id": 1,
+    "direction": "OUT",
+    "timestamp": "2026-01-29T10:14:26.058Z",
+    "recorded_by": 2
+  }
+},
+{
+  "model": "core.logentry",
+  "pk": 19,
+  "fields": {
+    "location": 1,
+    "entity_type": "employee",
+    "entity_id": 3,
+    "direction": "OUT",
+    "timestamp": "2026-01-29T10:18:50.434Z",
+    "recorded_by": 2
+  }
+},
+{
+  "model": "core.logentry",
+  "pk": 20,
+  "fields": {
+    "location": 1,
+    "entity_type": "vehicle",
+    "entity_id": 1,
+    "direction": "OUT",
+    "timestamp": "2026-01-29T10:18:55.277Z",
+    "recorded_by": 2
+  }
+},
+{
+  "model": "core.logentry",
+  "pk": 21,
+  "fields": {
+    "location": 1,
+    "entity_type": "vehicle",
+    "entity_id": 1,
+    "direction": "IN",
+    "timestamp": "2026-01-29T10:19:24.360Z",
+    "recorded_by": 2
+  }
+},
+{
+  "model": "core.logentry",
+  "pk": 22,
+  "fields": {
+    "location": 1,
+    "entity_type": "employee",
+    "entity_id": 1,
+    "direction": "IN",
+    "timestamp": "2026-01-29T10:19:24.367Z",
+    "recorded_by": 2
+  }
+},
+{
+  "model": "core.logentry",
+  "pk": 23,
+  "fields": {
+    "location": 1,
+    "entity_type": "employee",
+    "entity_id": 3,
+    "direction": "IN",
+    "timestamp": "2026-01-29T10:24:59.482Z",
+    "recorded_by": 2
+  }
+},
+{
+  "model": "core.logentry",
+  "pk": 24,
+  "fields": {
+    "location": 1,
+    "entity_type": "employee",
+    "entity_id": 3,
+    "direction": "OUT",
+    "timestamp": "2026-01-29T10:25:01.117Z",
+    "recorded_by": 2
+  }
+},
+{
+  "model": "core.logentry",
+  "pk": 25,
+  "fields": {
+    "location": 1,
+    "entity_type": "employee",
+    "entity_id": 3,
+    "direction": "IN",
+    "timestamp": "2026-01-29T10:25:27.257Z",
+    "recorded_by": 2
+  }
+},
+{
+  "model": "core.logentry",
+  "pk": 26,
+  "fields": {
+    "location": 1,
+    "entity_type": "employee",
+    "entity_id": 3,
+    "direction": "OUT",
+    "timestamp": "2026-01-29T10:25:27.997Z",
+    "recorded_by": 2
+  }
+},
+{
+  "model": "core.logentry",
+  "pk": 27,
+  "fields": {
+    "location": 1,
+    "entity_type": "employee",
+    "entity_id": 3,
+    "direction": "IN",
+    "timestamp": "2026-01-29T10:26:36.029Z",
+    "recorded_by": 2
+  }
+},
+{
+  "model": "core.logentry",
+  "pk": 28,
+  "fields": {
+    "location": 1,
+    "entity_type": "employee",
+    "entity_id": 3,
+    "direction": "OUT",
+    "timestamp": "2026-01-29T10:26:41.793Z",
+    "recorded_by": 2
+  }
+},
+{
+  "model": "core.logentry",
+  "pk": 29,
+  "fields": {
+    "location": 1,
+    "entity_type": "vehicle",
+    "entity_id": 1,
+    "direction": "OUT",
+    "timestamp": "2026-01-29T10:44:13.484Z",
+    "recorded_by": 2
+  }
+},
+{
+  "model": "core.logentry",
+  "pk": 30,
+  "fields": {
+    "location": 1,
+    "entity_type": "employee",
+    "entity_id": 1,
+    "direction": "OUT",
+    "timestamp": "2026-01-29T10:44:13.497Z",
+    "recorded_by": 2
+  }
+},
+{
+  "model": "core.logentry",
+  "pk": 31,
+  "fields": {
+    "location": 1,
+    "entity_type": "employee",
+    "entity_id": 1,
+    "direction": "IN",
+    "timestamp": "2026-01-29T10:44:19.979Z",
+    "recorded_by": 2
+  }
+},
+{
+  "model": "core.logentry",
+  "pk": 32,
+  "fields": {
+    "location": 1,
+    "entity_type": "employee",
+    "entity_id": 1,
+    "direction": "OUT",
+    "timestamp": "2026-01-29T10:46:00.796Z",
+    "recorded_by": 2
+  }
+},
+{
+  "model": "core.logentry",
+  "pk": 33,
+  "fields": {
+    "location": 1,
+    "entity_type": "vehicle",
+    "entity_id": 1,
+    "direction": "IN",
+    "timestamp": "2026-01-29T10:46:08.843Z",
+    "recorded_by": 2
+  }
+},
+{
+  "model": "core.logentry",
+  "pk": 34,
+  "fields": {
+    "location": 1,
+    "entity_type": "employee",
+    "entity_id": 1,
+    "direction": "IN",
+    "timestamp": "2026-01-29T10:46:08.858Z",
+    "recorded_by": 2
+  }
+},
+{
+  "model": "core.logentry",
+  "pk": 35,
+  "fields": {
+    "location": 1,
+    "entity_type": "vehicle",
+    "entity_id": 1,
+    "direction": "OUT",
+    "timestamp": "2026-01-29T10:46:29.171Z",
+    "recorded_by": 2
+  }
+},
+{
+  "model": "core.logentry",
+  "pk": 36,
+  "fields": {
+    "location": 1,
+    "entity_type": "employee",
+    "entity_id": 1,
+    "direction": "OUT",
+    "timestamp": "2026-01-29T10:46:29.185Z",
+    "recorded_by": 2
+  }
+},
+{
+  "model": "core.logentry",
+  "pk": 37,
+  "fields": {
+    "location": 1,
+    "entity_type": "vehicle",
+    "entity_id": 1,
+    "direction": "IN",
+    "timestamp": "2026-01-29T10:46:56.785Z",
+    "recorded_by": 2
+  }
+},
+{
+  "model": "core.logentry",
+  "pk": 38,
+  "fields": {
+    "location": 1,
+    "entity_type": "employee",
+    "entity_id": 1,
+    "direction": "IN",
+    "timestamp": "2026-01-29T10:46:56.799Z",
+    "recorded_by": 2
+  }
+},
+{
+  "model": "core.logentry",
+  "pk": 39,
+  "fields": {
+    "location": 1,
+    "entity_type": "employee",
+    "entity_id": 1,
+    "direction": "OUT",
+    "timestamp": "2026-01-29T10:47:06.037Z",
+    "recorded_by": 2
+  }
+},
+{
+  "model": "core.logentry",
+  "pk": 40,
+  "fields": {
+    "location": 1,
+    "entity_type": "vehicle",
+    "entity_id": 1,
+    "direction": "OUT",
+    "timestamp": "2026-01-29T10:47:31.510Z",
+    "recorded_by": 2
+  }
+},
+{
+  "model": "core.logentry",
+  "pk": 41,
+  "fields": {
+    "location": 1,
+    "entity_type": "vehicle",
+    "entity_id": 1,
+    "direction": "IN",
+    "timestamp": "2026-01-29T10:47:32.318Z",
+    "recorded_by": 2
+  }
+},
+{
+  "model": "core.logentry",
+  "pk": 42,
+  "fields": {
+    "location": 1,
+    "entity_type": "employee",
+    "entity_id": 1,
+    "direction": "IN",
+    "timestamp": "2026-01-29T10:47:32.335Z",
+    "recorded_by": 2
+  }
+},
+{
+  "model": "core.logentry",
+  "pk": 43,
+  "fields": {
+    "location": 1,
+    "entity_type": "vehicle",
+    "entity_id": 1,
+    "direction": "OUT",
+    "timestamp": "2026-01-29T10:50:46.041Z",
+    "recorded_by": 2
+  }
+},
+{
+  "model": "core.logentry",
+  "pk": 44,
+  "fields": {
+    "location": 1,
+    "entity_type": "employee",
+    "entity_id": 1,
+    "direction": "OUT",
+    "timestamp": "2026-01-29T10:50:46.054Z",
+    "recorded_by": 2
+  }
+},
+{
+  "model": "core.logentry",
+  "pk": 45,
+  "fields": {
+    "location": 1,
+    "entity_type": "employee",
+    "entity_id": 3,
+    "direction": "IN",
+    "timestamp": "2026-01-29T11:23:21.054Z",
+    "recorded_by": 2
+  }
+},
+{
+  "model": "core.logentry",
+  "pk": 46,
+  "fields": {
+    "location": 1,
+    "entity_type": "vehicle",
+    "entity_id": 1,
+    "direction": "IN",
+    "timestamp": "2026-01-29T11:23:36.165Z",
+    "recorded_by": 2
+  }
+},
+{
+  "model": "core.logentry",
+  "pk": 47,
+  "fields": {
+    "location": 1,
+    "entity_type": "employee",
+    "entity_id": 1,
+    "direction": "IN",
+    "timestamp": "2026-01-29T11:23:36.174Z",
+    "recorded_by": 2
+  }
+},
+{
+  "model": "core.logentry",
+  "pk": 48,
+  "fields": {
+    "location": 1,
+    "entity_type": "employee",
+    "entity_id": 1,
+    "direction": "OUT",
+    "timestamp": "2026-01-29T11:23:44.742Z",
+    "recorded_by": 2
+  }
+},
+{
+  "model": "core.logentry",
+  "pk": 49,
+  "fields": {
+    "location": 1,
+    "entity_type": "employee",
+    "entity_id": 2,
+    "direction": "IN",
+    "timestamp": "2026-01-29T11:23:45.405Z",
+    "recorded_by": 2
+  }
+},
+{
+  "model": "core.logentry",
+  "pk": 50,
+  "fields": {
+    "location": 1,
+    "entity_type": "employee",
+    "entity_id": 1,
+    "direction": "IN",
+    "timestamp": "2026-01-29T11:27:41.452Z",
+    "recorded_by": 2
+  }
+},
+{
+  "model": "core.logentry",
+  "pk": 51,
+  "fields": {
+    "location": 1,
+    "entity_type": "employee",
+    "entity_id": 2,
+    "direction": "OUT",
+    "timestamp": "2026-01-29T11:27:43.095Z",
+    "recorded_by": 2
+  }
+},
+{
+  "model": "core.logentry",
+  "pk": 52,
+  "fields": {
+    "location": 1,
+    "entity_type": "employee",
+    "entity_id": 1,
+    "direction": "OUT",
+    "timestamp": "2026-01-29T11:27:44.074Z",
+    "recorded_by": 2
+  }
+},
+{
+  "model": "core.logentry",
+  "pk": 53,
+  "fields": {
+    "location": 1,
+    "entity_type": "employee",
+    "entity_id": 2,
+    "direction": "IN",
+    "timestamp": "2026-01-29T11:27:45.219Z",
+    "recorded_by": 2
+  }
+},
+{
+  "model": "core.logentry",
+  "pk": 54,
+  "fields": {
+    "location": 1,
+    "entity_type": "employee",
+    "entity_id": 2,
+    "direction": "OUT",
+    "timestamp": "2026-01-29T11:27:46.865Z",
+    "recorded_by": 2
+  }
+},
+{
+  "model": "core.logentry",
+  "pk": 55,
+  "fields": {
+    "location": 1,
+    "entity_type": "employee",
+    "entity_id": 1,
+    "direction": "IN",
+    "timestamp": "2026-01-29T11:28:48.254Z",
+    "recorded_by": 2
+  }
+},
+{
+  "model": "core.logentry",
+  "pk": 56,
+  "fields": {
+    "location": 1,
+    "entity_type": "employee",
+    "entity_id": 1,
+    "direction": "OUT",
+    "timestamp": "2026-01-29T11:28:49.051Z",
+    "recorded_by": 2
+  }
+},
+{
+  "model": "core.logentry",
+  "pk": 57,
+  "fields": {
+    "location": 1,
+    "entity_type": "employee",
+    "entity_id": 1,
+    "direction": "IN",
+    "timestamp": "2026-01-29T11:37:25.874Z",
+    "recorded_by": 2
+  }
+},
+{
+  "model": "core.logentry",
+  "pk": 58,
+  "fields": {
+    "location": 1,
+    "entity_type": "employee",
+    "entity_id": 1,
+    "direction": "OUT",
+    "timestamp": "2026-01-29T11:37:38.814Z",
+    "recorded_by": 2
+  }
+},
+{
+  "model": "core.logentry",
+  "pk": 59,
+  "fields": {
+    "location": 1,
+    "entity_type": "employee",
+    "entity_id": 3,
+    "direction": "OUT",
+    "timestamp": "2026-01-29T11:40:14.618Z",
+    "recorded_by": 2
+  }
+},
+{
+  "model": "core.logentry",
+  "pk": 60,
+  "fields": {
+    "location": 2,
+    "entity_type": "employee",
+    "entity_id": 5,
+    "direction": "OUT",
+    "timestamp": "2026-01-29T11:59:38.042Z",
+    "recorded_by": 1
+  }
+},
+{
+  "model": "core.logentry",
+  "pk": 61,
+  "fields": {
+    "location": 1,
+    "entity_type": "employee",
+    "entity_id": 3,
+    "direction": "IN",
+    "timestamp": "2026-01-29T12:00:08.409Z",
+    "recorded_by": 1
+  }
+},
+{
+  "model": "core.logentry",
+  "pk": 62,
+  "fields": {
+    "location": 2,
+    "entity_type": "employee",
+    "entity_id": 4,
+    "direction": "IN",
+    "timestamp": "2026-01-29T12:00:12.507Z",
+    "recorded_by": 1
+  }
+},
+{
+  "model": "core.logentry",
+  "pk": 63,
+  "fields": {
+    "location": 3,
+    "entity_type": "employee",
+    "entity_id": 7,
+    "direction": "IN",
+    "timestamp": "2026-01-29T12:00:16.254Z",
+    "recorded_by": 1
+  }
+},
+{
+  "model": "core.logentry",
+  "pk": 64,
+  "fields": {
+    "location": 3,
+    "entity_type": "employee",
+    "entity_id": 9,
+    "direction": "IN",
+    "timestamp": "2026-01-29T12:00:16.992Z",
+    "recorded_by": 1
+  }
+},
+{
+  "model": "core.logentry",
+  "pk": 65,
+  "fields": {
+    "location": 3,
+    "entity_type": "vehicle",
+    "entity_id": 5,
+    "direction": "IN",
+    "timestamp": "2026-01-29T12:02:20.893Z",
+    "recorded_by": 1
+  }
+},
+{
+  "model": "core.logentry",
+  "pk": 66,
+  "fields": {
+    "location": 3,
+    "entity_type": "employee",
+    "entity_id": 8,
+    "direction": "OUT",
+    "timestamp": "2026-01-29T12:02:24.343Z",
+    "recorded_by": 1
+  }
+},
+{
+  "model": "core.logentry",
+  "pk": 67,
+  "fields": {
+    "location": 3,
+    "entity_type": "vehicle",
+    "entity_id": 5,
+    "direction": "OUT",
+    "timestamp": "2026-01-29T12:02:25.585Z",
+    "recorded_by": 1
+  }
+},
+{
+  "model": "core.logentry",
+  "pk": 68,
+  "fields": {
+    "location": 3,
+    "entity_type": "vehicle",
+    "entity_id": 5,
+    "direction": "IN",
+    "timestamp": "2026-01-29T12:02:29.731Z",
+    "recorded_by": 1
+  }
+},
+{
+  "model": "core.logentry",
+  "pk": 69,
+  "fields": {
+    "location": 3,
+    "entity_type": "employee",
+    "entity_id": 8,
+    "direction": "IN",
+    "timestamp": "2026-01-29T12:02:29.763Z",
+    "recorded_by": 1
+  }
+},
+{
+  "model": "core.logentry",
+  "pk": 70,
+  "fields": {
+    "location": 1,
+    "entity_type": "employee",
+    "entity_id": 1,
+    "direction": "IN",
+    "timestamp": "2026-01-29T12:09:32.377Z",
+    "recorded_by": 1
+  }
+},
+{
+  "model": "core.logentry",
+  "pk": 71,
+  "fields": {
+    "location": 1,
+    "entity_type": "employee",
+    "entity_id": 1,
+    "direction": "OUT",
+    "timestamp": "2026-01-29T12:09:33.210Z",
+    "recorded_by": 1
+  }
+},
+{
+  "model": "core.logentry",
+  "pk": 72,
+  "fields": {
+    "location": 1,
+    "entity_type": "employee",
+    "entity_id": 1,
+    "direction": "IN",
+    "timestamp": "2026-01-30T07:35:51.263Z",
+    "recorded_by": 1
+  }
+},
+{
+  "model": "core.logentry",
+  "pk": 73,
+  "fields": {
+    "location": 1,
+    "entity_type": "vehicle",
+    "entity_id": 2,
+    "direction": "IN",
+    "timestamp": "2026-01-30T07:36:10.122Z",
+    "recorded_by": 1
+  }
+},
+{
+  "model": "core.logentry",
+  "pk": 74,
+  "fields": {
+    "location": 1,
+    "entity_type": "vehicle",
+    "entity_id": 2,
+    "direction": "OUT",
+    "timestamp": "2026-01-30T07:36:10.680Z",
+    "recorded_by": 1
+  }
+}
+]
